@@ -14,16 +14,17 @@ import tensorflow as tf
 from tensorflow import keras
 import os.path
 
-from tensorflow.python.keras.layers import Reshape
-from tensorflow.python.keras.models import Sequential
-from tensorflow.python.keras.layers import Dense
-from tensorflow.python.keras.optimizers import SGD
-from tensorflow.python.keras.layers import Conv2D
-from tensorflow.python.keras.layers import MaxPool2D
-from tensorflow.python.keras import regularizers
+from tensorflow.keras.layers import Reshape
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import Conv2D
+from tensorflow.keras.layers import MaxPool2D
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.optimizers import SGD
+from tensorflow.keras import regularizers
 
 from scipy import ndimage as ndi
-from skimage.morphology import watershed, disk
+from skimage.segmentation import watershed
+from skimage.morphology import disk
 from skimage.feature import peak_local_max
 from PIL import Image
 from skimage import exposure, data, morphology
